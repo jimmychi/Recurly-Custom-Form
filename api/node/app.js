@@ -85,17 +85,18 @@ app.put('/api/accounts/:account_code', function (req, res) {
 app.use(express.static(__dirname + '/../../public'));
 
 // Start the server
-/*
 app.listen(9001, function () {
   console.log('Listening on port 9001');
 });
-*/
+
 
 /* Start the server */
+/*
 var server = app.listen(process.env.PORT || '8080', '0.0.0.0', function() {
   console.log('App listening at http://%s:%s', server.address().address, server.address().port);
   console.log("Press Ctrl+C to quit.");
 });
+*/
 
 // A set of utility functions for redirecting and parsing API errors
 function redirect (err, response) {
@@ -104,11 +105,11 @@ function redirect (err, response) {
 }
 
 function parseErrors (data) {
-  /*
+
   return data.errors
     ? data.errors.error.map(parseValidationErrors).join(', ')
     : [data.error.symbol, data.error.description].join(': ');
-    */
+
 }
 
 function parseValidationErrors (e) {
